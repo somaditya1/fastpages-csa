@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      4 min read
     
 </span></p>
 
@@ -125,6 +125,14 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Java-Lesson">Java Lesson<a class="anchor-link" href="#Java-Lesson"> </a></h2><p>If Statements
+If statements evaluate the conditional given, and if true, execute the code block inside the statement.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -132,14 +140,47 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">&gt;</span> <span class="n">Python</span> <span class="n">test</span> <span class="n">code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 
-<span class="o">-</span> <span class="n">badges</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">comments</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">jupyter</span><span class="p">,</span> <span class="n">python</span><span class="p">]</span>
+<span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter another number: &quot;</span><span class="p">);</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+
+<span class="c1">// Modulo function returns remainder of x and y</span>
+<span class="c1">// checks if remainder of x and y is 0 (meaning it is divisible)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is divisible by &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a number: 2.0
+Enter another number: 4.0
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -148,438 +189,393 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "82fde87d",
-   "metadata": {},
-   "source": [
-    "# Java Conditionals Notebook"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "183347da",
-   "metadata": {},
-   "source": [
-    "### If Statements\n",
-    "If statements evaluate the conditional given, and if true, execute the code block inside the statement. "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "8ca309ca",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 10.0\n",
-      "Enter another number: 5.0\n",
-      "10.0 is divisible by 5.0\n"
-     ]
-    }
-   ],
-   "source": [
-    "import java.util.Scanner;\n",
-    "Scanner scanner = new Scanner(System.in);\n",
-    "\n",
-    "double x;\n",
-    "double y;\n",
-    "\n",
-    "System.out.print(\"Enter a number: \");\n",
-    "\n",
-    "x = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(x);\n",
-    "\n",
-    "System.out.print(\"Enter another number: \");\n",
-    "\n",
-    "y = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(y);\n",
-    "\n",
-    "// Modulo function returns remainder of x and y\n",
-    "// checks if remainder of x and y is 0 (meaning it is divisible)\n",
-    "if (x % y == 0) {\n",
-    "  System.out.println(x + \" is divisible by \" + y);\n",
-    "}\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "0cf5f7dc",
-   "metadata": {},
-   "source": [
-    "### If-Else Statements\n",
-    "If statements contain code to be run if a given conditional is true. Else statements contain code to be run if that conditional is proven false. "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "id": "50f08c05",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 20.0\n",
-      "Enter another number: 7.0\n",
-      "20.0 is NOT divisible by 7.0\n"
-     ]
-    }
-   ],
-   "source": [
-    "import java.util.Scanner;\n",
-    "Scanner scanner = new Scanner(System.in);\n",
-    "\n",
-    "double x;\n",
-    "double y;\n",
-    "\n",
-    "System.out.print(\"Enter a number: \");\n",
-    "\n",
-    "x = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(x);\n",
-    "\n",
-    "System.out.print(\"Enter another number: \");\n",
-    "\n",
-    "y = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(y);\n",
-    "\n",
-    "// Modulo function returns remainder of x and y\n",
-    "// checks if remainder of x and y is 0 (meaning it is divisible)\n",
-    "if (x % y == 0) {\n",
-    "  System.out.println(x + \" is divisible by \" + y);\n",
-    "} else { // the code below runs if the remainder of x and y is NOT 0\n",
-    "  System.out.println(x + \" is NOT divisible by \" + y);\n",
-    "}"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "03d6ca18",
-   "metadata": {},
-   "source": [
-    "### If-elseif-else\n",
-    "Elseif blocks come between if and else statements. Elseif statements function similar to if statements in that they contain code that is run if a given conditional is true. However, elseif statements only run if the prior if or elseif block is false. Otherwise, they are passed over. \n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "7336fc94",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "import java.util.Scanner;\n",
-    "Scanner scanner = new Scanner(System.in);\n",
-    "\n",
-    "double x;\n",
-    "double y;\n",
-    "\n",
-    "System.out.print(\"Enter a number: \");\n",
-    "\n",
-    "x = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(x);\n",
-    "\n",
-    "System.out.print(\"Enter another number: \");\n",
-    "\n",
-    "y = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(y);\n",
-    "\n",
-    "if (x &gt; y) { // checks if x is greater than y\n",
-    "    System.out.println(x + \" is greater than \" + y);\n",
-    "} else if (x == y) { // if x isnt greater than y, check if theyre equal\n",
-    "    System.out.println(x + \" is equal to \" + y);\n",
-    "} else { // only option is x being less than y\n",
-    "    System.out.println(x + \" is less than \" + y);\n",
-    "}"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "bc157bd3",
-   "metadata": {},
-   "source": [
-    "### Multiple elseifs"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "id": "4217f472",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "First number: 7.0\n",
-      "Enter the operation (+,-,<em>,/): 9\n",
-      "second number: 9.0\n",
-      "Invalid operator\n"
-     ]
-    }
-   ],
-   "source": [
-    "import java.util.Scanner;\n",
-    "Scanner scanner = new Scanner(System.in);\n",
-    "\n",
-    "double x;\n",
-    "double y;\n",
-    "\n",
-    "System.out.print(\"First number: \");\n",
-    "\n",
-    "x = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(x);\n",
-    "\n",
-    "System.out.print(\"Enter the operation (+,-,</em>,/): \");\n",
-    "\n",
-    "char operator = scanner.next().charAt(0);\n",
-    "\n",
-    "System.out.println(operator);\n",
-    "\n",
-    "System.out.print(\"second number: \");\n",
-    "\n",
-    "y = scanner.nextDouble();\n",
-    "\n",
-    "System.out.println(y);\n",
-    "\n",
-    "if (operator == '+') {\n",
-    "  System.out.println(x + y);\n",
-    "} else if (operator == '-') {\n",
-    "  System.out.println(x - y);\n",
-    "} else if (operator == '<em>') {\n",
-    "  System.out.println(x </em> y);\n",
-    "} else if (operator == '/') {\n",
-    "  System.out.println(x / y);\n",
-    "} else {\n",
-    "  System.out.println(\"Invalid operator\");\n",
-    "}\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "d9f98d4b",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "id": "0668f714",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Enter a color (r,g,b,y): g\n",
-      "type a message\n",
-      "The final result: \n",
-      "\u001b[32mfadfadf\n"
-     ]
-    }
-   ],
-   "source": [
-    "double num1, num2;\n",
-    "\n",
-    "Scanner scanner = new Scanner(System.in);\n",
-    "\n",
-    "System.out.print(\"Enter a color (r,g,b,y): \");\n",
-    "\n",
-    "char color = scanner.next().charAt(0);\n",
-    "\n",
-    "System.out.println(color);\n",
-    "\n",
-    "Scanner newScanner = new Scanner(System.in);\n",
-    "\n",
-    "System.out.println(\"type a message\");\n",
-    "String message = newScanner.nextLine();\n",
-    "\n",
-    "\n",
-    "String output = \"\";\n",
-    "\n",
-    "switch (color) {\n",
-    "\n",
-    "case 'r':\n",
-    "\n",
-    "    output = \"\u001B[31m\";\n",
-    "\n",
-    "    break;\n",
-    "\n",
-    "case 'g':\n",
-    "\n",
-    "    output = \"\u001B[32m\";\n",
-    "\n",
-    "    break;\n",
-    "\n",
-    "case 'b':\n",
-    "\n",
-    "    output = \"\u001B[34m\";\n",
-    "\n",
-    "    break;\n",
-    "case 'y':\n",
-    "\n",
-    "    output = \"\u001B[33m\";\n",
-    "\n",
-    "    break;\n",
-    "\n",
-    "default:\n",
-    "\n",
-    "    System.out.println(\"invalid color\");\n",
-    "\n",
-    "    break;\n",
-    "}\n",
-    "\n",
-    "System.out.println(\"The final result: \");\n",
-    "\n",
-    "System.out.println(output + message);\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b5b47173",
-   "metadata": {},
-   "source": [
-    "### De Morgan's Law\n",
-    "Augstus De Morgan developed DeMorgan's laws in the 1800s. DeMorgan's law explains complex conditional negation. A complex conditional is multiple conditional statements joined by a logical operator. \n",
-    "\n",
-    "not (a and b) is the same as (not a) or (not b). In Java this is written as !(a &amp;&amp; b) == !a || !b\n",
-    "\n",
-    "not (a or b) is the same as (not a) and (not b). In Java this is written as !(a || b) == !a &amp;&amp; !b\n",
-    "\n",
-    "Negation modifies each conditional. "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 13,
-   "id": "6bcf5530",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "false\n"
-     ]
-    }
-   ],
-   "source": [
-    "public class DeMorgansAndTest\n",
-    "{\n",
-    "   public static void main(String[] args)\n",
-    "   {\n",
-    "     int x = 15;\n",
-    "     int y = 164;\n",
-    "     System.out.println(!(x&lt;20 &amp;&amp; y &gt; 100));\n",
-    "     // prints true if x is not less than 20 or if y is not greater than 100\n",
-    "     // prints false if none of these are true\n",
-    "     // this output should be false since x is less than 20 and y is greater than 100\n",
-    "   }\n",
-    "}\n",
-    "\n",
-    "DeMorgansAndTest.main(null)\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 14,
-   "id": "e83681e8",
-   "metadata": {
-    "vscode": {
-     "languageId": "java"
-    }
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "true\n"
-     ]
-    }
-   ],
-   "source": [
-    "public class DeMorgansOrTest\n",
-    "{\n",
-    "   public static void main(String[] args)\n",
-    "   {\n",
-    "     int x = 124;\n",
-    "     int y = 9;\n",
-    "     System.out.println(!(x &gt; 200 || y &lt; 2));\n",
-    "     // prints true if x is not &gt; 200 AND y is not &lt; 2\n",
-    "     // prints false otherwise\n",
-    "     // this output should be true as x is NOT greater than 200 and y is NOT less than 2\n",
-    "   }\n",
-    "}\n",
-    "DeMorgansOrTest.main(null)\n"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Java",
-   "language": "java",
-   "name": "java"
-  },
-  "language_info": {
-   "codemirror_mode": "java",
-   "file_extension": ".jshell",
-   "mimetype": "text/x-java-source",
-   "name": "Java",
-   "pygments_lexer": "java",
-   "version": "18.0.2+0"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}</p>
+<p>If-Else Statements
+If statements contain code to be run if a given conditional is true. Else statements contain code to be run if that conditional is proven false.</p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter another number: &quot;</span><span class="p">);</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+
+<span class="c1">// Modulo function returns remainder of x and y</span>
+<span class="c1">// checks if remainder of x and y is 0 (meaning it is divisible)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is divisible by &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// the code below runs if the remainder of x and y is NOT 0</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is NOT divisible by &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a number: 2.0
+Enter another number: 4.0
+2.0 is NOT divisible by 4.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If-elseif-else
+Elseif blocks come between if and else statements. Elseif statements function similar to if statements in that they contain code that is run if a given conditional is true. However, elseif statements only run if the prior if or elseif block is false. Otherwise, they are passed over.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter another number: &quot;</span><span class="p">);</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// checks if x is greater than y</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is greater than &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if x isnt greater than y, check if theyre equal</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is equal to &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// only option is x being less than y</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&quot; is less than &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a number: 4.0
+Enter another number: 6.0
+4.0 is less than 6.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Multiple elseifs</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;First number: &quot;</span><span class="p">);</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter the operation (+,-,*,/): &quot;</span><span class="p">);</span>
+
+<span class="kt">char</span> <span class="n">operator</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">operator</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;second number: &quot;</span><span class="p">);</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">operator</span> <span class="o">==</span> <span class="sc">&#39;+&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operator</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operator</span> <span class="o">==</span> <span class="sc">&#39;*&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operator</span> <span class="o">==</span> <span class="sc">&#39;/&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid operator&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>First number: 5.0
+Enter the operation (+,-,*,/): +
+second number: 5.0
+10.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
+
+<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a color (r,g,b,y): &quot;</span><span class="p">);</span>
+
+<span class="kt">char</span> <span class="n">color</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+
+<span class="n">Scanner</span> <span class="n">newScanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;type a message&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">newScanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+
+<span class="n">String</span> <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="k">switch</span> <span class="p">(</span><span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="k">case</span> <span class="sc">&#39;r&#39;</span><span class="p">:</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[31m&quot;</span><span class="p">;</span>
+
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="sc">&#39;g&#39;</span><span class="p">:</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[32m&quot;</span><span class="p">;</span>
+
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="sc">&#39;b&#39;</span><span class="p">:</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[34m&quot;</span><span class="p">;</span>
+
+    <span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="sc">&#39;y&#39;</span><span class="p">:</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[33m&quot;</span><span class="p">;</span>
+
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="nl">default:</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;invalid color&quot;</span><span class="p">);</span>
+
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The final result: &quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span> <span class="o">+</span> <span class="n">message</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a color (r,g,b,y): r
+type a message
+The final result: 
+<span class="ansi-red-fg">hello
+</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>De Morgan's Law
+Augstus De Morgan developed DeMorgan's laws in the 1800s. DeMorgan's law explains complex conditional negation. A complex conditional is multiple conditional statements joined by a logical operator.</p>
+<p>not (a and b) is the same as (not a) or (not b). In Java this is written as !(a &amp;&amp; b) == !a || !b</p>
+<p>not (a or b) is the same as (not a) and (not b). In Java this is written as !(a || b) == !a &amp;&amp; !b</p>
+<p>Negation modifies each conditional.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DeMorgansAndTest</span>
+<span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">164</span><span class="p">;</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">20</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">));</span>
+     <span class="c1">// prints true if x is not less than 20 or if y is not greater than 100</span>
+     <span class="c1">// prints false if none of these are true</span>
+     <span class="c1">// this output should be false since x is less than 20 and y is greater than 100</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">DeMorgansAndTest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DeMorgansOrTest</span>
+<span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">124</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">));</span>
+     <span class="c1">// prints true if x is not &gt; 200 AND y is not &lt; 2</span>
+     <span class="c1">// prints false otherwise</span>
+     <span class="c1">// this output should be true as x is NOT greater than 200 and y is NOT less than 2</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">DeMorgansOrTest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
