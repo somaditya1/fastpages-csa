@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -444,6 +444,236 @@ Your Un-weighted GPA is:3.6666666666666665
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Unit-2">Unit 2<a class="anchor-link" href="#Unit-2"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Goblin</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">HP</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">DMG</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">hitChance</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getHP</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">HP</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDMG</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">DMG</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getHitChance</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">hitChance</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isAlive</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">HP</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">newName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">newName</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHP</span><span class="p">(</span><span class="kt">int</span> <span class="n">newHP</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">HP</span> <span class="o">=</span> <span class="n">newHP</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">takeDMG</span><span class="p">(</span><span class="kt">int</span> <span class="n">takenDamage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">HP</span> <span class="o">-=</span> <span class="n">takenDamage</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDMG</span><span class="p">(</span><span class="kt">int</span> <span class="n">newDMG</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">DMG</span> <span class="o">=</span> <span class="n">newDMG</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHitChance</span><span class="p">(</span><span class="kt">double</span> <span class="n">newHitChance</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hitChance</span> <span class="o">=</span> <span class="n">newHitChance</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Duel</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">fight</span><span class="p">(</span><span class="n">Goblin</span> <span class="n">goblin1</span><span class="p">,</span> <span class="n">Goblin</span> <span class="n">goblin2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">isAlive</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">goblin2</span><span class="p">.</span><span class="na">isAlive</span><span class="p">())</span> <span class="p">{</span>
+
+            <span class="c1">// goblin1 hit chance tester</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">goblin2</span><span class="p">.</span><span class="na">getHitChance</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">goblin2</span><span class="p">.</span><span class="na">takeDMG</span><span class="p">(</span><span class="n">goblin2</span><span class="p">.</span><span class="na">getDMG</span><span class="p">());</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; takes &quot;</span> <span class="o">+</span> <span class="n">goblin2</span><span class="p">.</span><span class="na">getDMG</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; damage&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin2</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; missed!&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="c1">// print hp of goblin1</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; HP: &quot;</span> <span class="o">+</span> <span class="n">goblin1</span><span class="p">.</span><span class="na">getHP</span><span class="p">());</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">goblin1</span><span class="p">.</span><span class="na">isAlive</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; has perished&quot;</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// if statement for goblin2 hit chance</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">goblin1</span><span class="p">.</span><span class="na">getHitChance</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">goblin2</span><span class="p">.</span><span class="na">takeDMG</span><span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">getDMG</span><span class="p">());</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin2</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; takes &quot;</span> <span class="o">+</span> <span class="n">goblin1</span><span class="p">.</span><span class="na">getDMG</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; damage&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin1</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; missed!&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="c1">// print hp of goblin2</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin2</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; HP: &quot;</span> <span class="o">+</span> <span class="n">goblin2</span><span class="p">.</span><span class="na">getHP</span><span class="p">());</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">goblin2</span><span class="p">.</span><span class="na">isAlive</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">goblin2</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; has perished&quot;</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Goblin</span> <span class="n">goblin1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Goblin</span><span class="p">();</span>
+        <span class="n">goblin1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Thomas Jefferson&quot;</span><span class="p">);</span>
+        <span class="n">goblin1</span><span class="p">.</span><span class="na">setHP</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+        <span class="n">goblin1</span><span class="p">.</span><span class="na">setDMG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">goblin1</span><span class="p">.</span><span class="na">setHitChance</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+
+        <span class="n">Goblin</span> <span class="n">goblin2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Goblin</span><span class="p">();</span>
+        <span class="n">goblin2</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;George Washington&quot;</span><span class="p">);</span>
+        <span class="n">goblin2</span><span class="p">.</span><span class="na">setHP</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">goblin2</span><span class="p">.</span><span class="na">setDMG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">goblin2</span><span class="p">.</span><span class="na">setHitChance</span><span class="p">(</span><span class="mf">0.75</span><span class="p">);</span>
+
+        <span class="n">fight</span><span class="p">(</span><span class="n">goblin1</span><span class="p">,</span> <span class="n">goblin2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Duel</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Thomas Jefferson takes 1 damage
+Thomas Jefferson HP: 12
+Thomas Jefferson missed!
+George Washington HP: 3
+Thomas Jefferson takes 1 damage
+Thomas Jefferson HP: 12
+Thomas Jefferson missed!
+George Washington HP: 2
+George Washington missed!
+Thomas Jefferson HP: 12
+George Washington takes 2 damage
+George Washington HP: 0
+George Washington has perished
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// #FRQ 1</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordMatch</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">secret</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">WordMatch</span><span class="p">(</span><span class="n">String</span> <span class="n">secret</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">secret</span> <span class="o">=</span> <span class="n">secret</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// for loop for first substring index</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">secret</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="c1">// loop for second substring index</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">secret</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// if statement</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">secret</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span> <span class="p">{</span>
+                    <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Returning a point value</span>
+        <span class="kt">int</span> <span class="n">points</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span> <span class="o">+</span> <span class="n">guess</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">points</span><span class="p">);</span>
+        <span class="c1">// return points;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">WordMatch</span> <span class="n">game</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WordMatch</span><span class="p">(</span><span class="s">&quot;mississippi&quot;</span><span class="p">);</span>
+<span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;iss&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;issipp&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;mississippi&quot;</span><span class="p">);</span>
+
+<span class="n">WordMatch</span> <span class="n">game</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WordMatch</span><span class="p">(</span><span class="s">&quot;aaaabb&quot;</span><span class="p">);</span>
+<span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;aa&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;aabb&quot;</span><span class="p">);</span> <span class="n">game</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">&quot;c&quot;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>i = 4
+iss = 18
+issipp = 36
+mississippi = 121
+a = 4
+aa = 12
+aaa = 18
+aabb = 16
+c = 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Unit-3-Boolean-expressions-and-ifs-lesson">Unit 3 Boolean expressions and ifs lesson<a class="anchor-link" href="#Unit-3-Boolean-expressions-and-ifs-lesson"> </a></h1><p>Hacks
 2009 FRQ 3b
 2017 FRQ 1b
@@ -475,6 +705,31 @@ Your Un-weighted GPA is:3.6666666666666665
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class BatteryCharger {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int getChargeStartTime(int chargeTime) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int starting = 0;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (int j = 1; j &lt; 24; j++) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            if (this.getChargingCost(j, chargeTime) &lt; this.getChargingCost(starting, chargeTime)) starting = j;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return starting;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
+<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
+<span class="ansi-red-intense-fg ansi-bold">   - method getChargingCost(int,int)</span></pre>
+</div>
+</div>
+
 </div>
 </div>
 
